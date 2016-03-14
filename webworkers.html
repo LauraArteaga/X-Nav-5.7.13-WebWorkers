@@ -13,9 +13,7 @@
     worker.onmessage = function(event) {
       console.log("Recibo " + event.data + "\n");
       if(event.data == "Fin"){
-          console.log("Worker off\n")
           worker.terminate();
-          console.log("ok\n")
       }else{
         document.getElementById('result').innerHTML = event.data;
       }
